@@ -1,0 +1,254 @@
+/*RESET*/
+*::before,
+::after {
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/*FONTS*/
+@font-face {
+  src: url(../fonts/Poppins-Regular.ttf);
+  font-family: "Poppins-Regular";
+}
+@font-face {
+  src: url("../fonts/AkayaKanadaka-Regular.ttf");
+  font-family: "Akaya";
+}
+@font-face {
+  src: url(../fonts/Raleway-Regular.ttf);
+  font-family: "Raleway-Regular";
+}
+@font-face {
+  src: url(../fonts/Raleway-Bold.ttf);
+  font-family: "Raleway-Bold";
+}
+
+/*BASE STYLES*/
+body {
+  padding: 0;
+  cursor: default;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.container::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.55;
+  background-image: url(../images/clouds.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+header,
+main {
+  max-width: 1100px;
+}
+
+/* navbar */
+.nav {
+  padding: 0 1rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 620px) {
+  .nav-menu {
+    position: fixed;
+    margin: 3.5rem 0 0 0;
+    opacity: 0;
+    top: 0%;
+    right: -100%;
+    width: 50%;
+    height: 25;
+    background-color: wheat;
+    transition: all 0.5s ease-in;
+  }
+
+  .nav-item {
+    padding: 1.69rem 0;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 250ms ease-in;
+  }
+  .nav-item:hover {
+    background-color: black;
+  }
+  .nav-item:hover a {
+    color: wheat;
+  }
+}
+.nav-logo {
+  color: white;
+  font-family: "Akaya";
+}
+.show {
+  right: 0%;
+  opacity: 1;
+}
+.nav-link {
+  color: black;
+  font-family: "Poppins-regular";
+}
+.toggle-menu {
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  padding-top: 0.5rem;
+}
+
+/* ... */
+
+/* content */
+.home {
+  height: 100vh;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  height: 80vh;
+}
+.home-text {
+  grid-row: 2/3;
+}
+.home-title {
+  color: wheat;
+  padding-bottom: 1rem;
+  font-family: "Raleway-Bold";
+  font-size: 2.3rem;
+}
+.home-subtitle {
+  letter-spacing: 0.2rem;
+  font-weight: lighter;
+  font-family: "Raleway-Regular";
+  padding-bottom: 1rem;
+}
+.home-description {
+  font-family: "Raleway-Regular";
+  letter-spacing: 0.2rem;
+}
+#button {
+  margin-top: 1.5rem;
+}
+.button {
+  color: black;
+  font-weight: lighter;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-family: "Poppins-Regular";
+  background-color: wheat;
+  transition: all 250ms ease-in;
+}
+.button:hover {
+  background-color: white;
+  box-shadow: 0px 0px 10px 2px wheat, -0px -0px 10px 2px white;
+}
+.home-icon-top {
+  z-index: -1;
+  padding-top: 1.5rem;
+  color: white;
+}
+.home-icon-bottom {
+  padding-top: 5rem;
+  color: white;
+}
+
+/* ... */
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.copyright {
+  padding-top: 0.5rem;
+  font-family: "Akaya";
+  color: wheat;
+}
+.footer-icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: wheat;
+}
+
+/* ... */
+
+/*RESONSIVE*/
+@media screen and (min-width: 621px) {
+  .nav-logo {
+    padding: 0 1.5rem;
+  }
+  .toggle-menu {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    color: white;
+  }
+  .nav-item {
+    padding-right: 2rem;
+    margin-left: auto;
+  }
+  .nav-link {
+    color: white;
+    transition: all 300ms ease-in;
+  }
+  .nav-item:hover a {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .home-title {
+    font-size: 3rem;
+    padding-bottom: 0.3rem;
+  }
+  .home-description {
+    padding: 1rem 0 0 0;
+    font-size: 1.2rem;
+  }
+  .footer-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  header,
+  main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
