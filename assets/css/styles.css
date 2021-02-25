@@ -189,7 +189,7 @@ main {
 /* footer */
 footer {
   position: fixed;
-  bottom: 0;
+  
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -199,12 +199,12 @@ footer {
 .copyright {
   padding-top: 0.5rem;
   font-family: "Akaya";
-  color: wheat;
+  color: white;
 }
 .footer-icon {
   cursor: pointer;
   font-size: 1.3rem;
-  color: wheat;
+  color: white;
 }
 
 /* ... */
